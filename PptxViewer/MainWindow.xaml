@@ -92,7 +92,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Text="SLIDES" Foreground="#888" FontSize="11"
-                               FontWeight="Bold" Margin="12,8" LetterSpacing="2"/>
+                               FontWeight="Bold" Margin="12,8"/>
                     <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto"
                                   HorizontalScrollBarVisibility="Disabled">
                         <ListBox x:Name="ThumbnailList"
@@ -179,7 +179,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <TextBlock Text="SPEAKER NOTES" Foreground="#888" FontSize="11"
-                           FontWeight="Bold" Margin="12,6" LetterSpacing="2"/>
+                           FontWeight="Bold" Margin="12,6"/>
                 <ScrollViewer Grid.Row="1" Margin="12,0,12,8"
                               VerticalScrollBarVisibility="Auto">
                     <TextBlock x:Name="NotesText"
