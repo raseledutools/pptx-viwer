@@ -144,7 +144,8 @@ public static class PptxParser
         // Check if title placeholder
         var ph = sp.NonVisualShapeProperties?.ApplicationNonVisualDrawingProperties
             ?.GetFirstChild<P.PlaceholderShape>();
-        if (ph?.Type?.Value is P.PlaceholderValues.Title or P.PlaceholderValues.CenteredTitle)
+        if (ph?.Type?.Value == P.PlaceholderValues.Title ||
+            ph?.Type?.Value == P.PlaceholderValues.CenteredTitle)
             isTitle = true;
 
         return new ShapeData(x, y, w, h, text, textColor, fontSize,
@@ -304,7 +305,7 @@ public static class PptxParser
                 Source = bmp,
                 Width = s.Width,
                 Height = s.Height,
-                Stretch = Stretch.Uniform
+                Stretch = System.Windows.Media.Stretch.Uniform
             };
             Canvas.SetLeft(img, s.X);
             Canvas.SetTop(img, s.Y);
